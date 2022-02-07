@@ -6183,7 +6183,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return undefined;
 	    };
 	  }
-		conset Searching = Search.prototype;
+		const Searching = Search.prototype;
 		
 		function Search(){
 			this.keyword = document.querySelector('input[name = "search"]');
