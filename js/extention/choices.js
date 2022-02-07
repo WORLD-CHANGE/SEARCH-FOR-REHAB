@@ -6183,7 +6183,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return undefined;
 	    };
 	  }
-
+		conset Searching = Search.prototype;
+		
+		function Search(){
+			this.keyword = document.querySelector('input[name = "search"]');
+			this.engine = document.querySelector('.SelectSearch');
+			this.button = document.querySelector(',img-button');
+			this.form = document.querySelector('.search');
+			
+			this.Engine();
+		}
+		Searching.Engine = function(){
+			this.form.addEventListener('submit', e => {
+				
+				e.preventDefault();
+				
+				let engine = this.engine.value;
+				let keyword = this.keyword.value;
+				
+				if(engine === '고양시'){
+					location.href = 'https://www.naver.com/' + keyword;
+				}else if(engine === '식사동'){
+				location.href = 'http://www.imsacademy.net/online_edu/2' + keyword;
+				}
+			});
+		}
+		
+		new Search();
 	  function CustomEvent(event, params) {
 	    params = params || {
 	      bubbles: false,
